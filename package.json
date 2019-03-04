@@ -1,0 +1,56 @@
+{
+  "name": "mu-config",
+  "version": "0.1.0",
+  "description": "12-factor configuration abstraction for your nodejs microservices.",
+  "main": "index.js",
+  "scripts": {
+    "start": "echo 'This is a library' && exit 1",
+    "clean": "rimraf dist .nyc_output",
+    "build": "npm run clean && tsc -p .",
+    "build:watch": "npm run build -- -w",
+    "lint": "tslint -t stylish './src/**/*.ts' './test/**/*.ts'",
+    "prettier": "prettier './{src,test}/**/*.ts' --write",
+    "prettier:check": "echo 'Checking for prettier violations...' && prettier './{src,test}/**/*.ts' --list-different",
+    "test": "nyc mocha './test/**/*.spec.ts'",
+    "precommit": "npm run prettier && npm run lint && npm run build && npm run test",
+    "ci:test": "npm run prettier:check && npm run lint && npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dflor003/mu-config.git"
+  },
+  "keywords": [
+    "config",
+    "configuration",
+    "settings",
+    "microservices",
+    "micro",
+    "mu-config",
+    "mu",
+    "12-factor",
+    "12factor",
+    "12",
+    "factor"
+  ],
+  "author": "Danil Flores <dflor003@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dflor003/mu-config/issues"
+  },
+  "homepage": "https://github.com/dflor003/mu-config#readme",
+  "dependencies": {
+    "tslib": "^1.9.3"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.6",
+    "chai": "^4.2.0",
+    "mocha": "^6.0.2",
+    "nyc": "^13.3.0",
+    "prettier": "^1.16.4",
+    "rimraf": "^2.6.3",
+    "ts-node": "^8.0.2",
+    "tslint": "5.13.1",
+    "typescript": "~3.3.x"
+  }
+}

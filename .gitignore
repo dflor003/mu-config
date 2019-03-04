@@ -1,0 +1,43 @@
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Code coverage
+lib-cov
+coverage
+.nyc_output
+
+# Node-specific
+.lock-wscript
+build/Release
+node_modules
+.npm
+.yarn-integrity
+.node_repl_history
+*.tgz
+
+# IDE-specific
+.vscode
+.idea
+.vs
+
+# TypeScript Compiled Files
+/src/**/*.js
+/src/**/*.js.map
+/test/**/*.js
+/test/**/*.map
+
+# Compiled output
+/dist
+/tmp/
+/out-tsc
+
+# System Files
+.DS_Store
+Thumbs.db
